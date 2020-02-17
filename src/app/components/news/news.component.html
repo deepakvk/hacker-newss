@@ -1,0 +1,20 @@
+<mat-card class="mat-card demo-card dropdown-item"  *ngFor="let item of News">
+	<mat-card-header>
+      <mat-card-title class="title">{{item.title}}</mat-card-title>
+	  <mat-card-subtitle *ngIf="item.url"><span class="mat-body-strong mat-body-2">from : </span> {{item.url}} <br>by {{item.by}}</mat-card-subtitle>
+    </mat-card-header>
+	<mat-card-content>
+      <p>
+        {{item.text}}
+      </p>
+    </mat-card-content>
+	<mat-card-actions class="action-buttons">
+      <button mat-button color="primary"><mat-icon>thumb_up_alt</mat-icon> Likes</button>
+      <button mat-button color="primary"><mat-icon>comment</mat-icon> Comments</button>
+      <button mat-button color="primary"><mat-icon>share</mat-icon> Share</button>
+      <a mat-button color="primary" href="{{item.url}}" target="_blank" ><mat-icon>visibility</mat-icon> View</a>
+    </mat-card-actions>
+
+</mat-card>
+<!--<mat-paginator [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" (page)="onPageChanged($event)">
+</mat-paginator>-->
