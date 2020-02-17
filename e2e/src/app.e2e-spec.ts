@@ -1,5 +1,5 @@
 import { AppPage } from './app.po';
-import { browser, logging } from 'protractor';
+import { browser, logging, by, element } from 'protractor';
 
 describe('workspace-project App', () => {
   let page: AppPage;
@@ -8,9 +8,9 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display hacker news', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('hacker-news app is running!');
+    expect(page.getTitleText()).toEqual('Hacker News');
   });
 
   afterEach(async () => {
